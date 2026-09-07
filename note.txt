@@ -1,1 +1,26 @@
-Ich gehe heute grillen, morgen spiele ich tt.
+1. Sign up github.com
+
+2. Some zsh commands on your local computer
+
+  % pwd
+  print working directory
+
+  % mkdir lucas
+  make a directory named lucas
+
+  % cd lucas
+  change the working directory
+
+3. Editor (VS Code or Vim)
+
+4. Some commands for git(version control system)
+
+  % git status
+
+  % git init
+  % git add note.txt
+  % git commit -m 'first version'
+  (Create new repository in github.com)
+  % git push
+
+  % git log --oneline

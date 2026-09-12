@@ -1,7 +1,7 @@
 import { siteConfig } from "@/lib/site-config";
 import { ImageResponse } from "next/og";
 
-export const alt = `${siteConfig.name} — table tennis, guitar, and AI`;
+export const alt = `${siteConfig.name} — table tennis, markets, and AI`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -77,7 +77,7 @@ export default function OpengraphImage() {
             marginTop: 28,
           }}
         >
-          table tennis 🏓 · guitar 🎸 · AI 🤖
+          table tennis 🏓 · markets 📈 · AI 🤖
         </div>
       </div>
     ),

@@ -25,24 +25,24 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — table tennis, guitar, and AI`,
+    default: `${siteConfig.name} — table tennis, markets, and AI`,
     template: `%s · ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ["Lucas", "table tennis", "guitar", "AI", "personal website"],
+  keywords: ["Lucas", "table tennis", "stock market", "AI", "personal website"],
   authors: [{ name: siteConfig.fullName }],
   creator: siteConfig.fullName,
   openGraph: {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: `${siteConfig.name} — table tennis, guitar, and AI`,
+    title: `${siteConfig.name} — table tennis, markets, and AI`,
     description: siteConfig.description,
     siteName: `${siteConfig.name}'s website`,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — table tennis, guitar, and AI`,
+    title: `${siteConfig.name} — table tennis, markets, and AI`,
     description: siteConfig.description,
   },
 };

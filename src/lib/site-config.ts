@@ -25,13 +25,13 @@ export const siteConfig = {
   url: "https://lucas.vercel.app",
 
   description:
-    "Middle schooler who plays table tennis, plays guitar, and builds things with AI. Come say hi.",
+    "Middle schooler who plays table tennis, watches the markets, and builds things with AI. Come say hi.",
 
   // ── Hero ──────────────────────────────────────────────────────────
   // These rotate one after another under your name. Add as many as you want.
   taglines: [
     "plays table tennis 🏓",
-    "plays guitar 🎸",
+    "watches the markets 📈",
     "builds things with AI 🤖",
     "has business ideas 💡",
     "is looking for new friends 👋",
@@ -39,12 +39,12 @@ export const siteConfig = {
   ],
 
   heroIntro:
-    "I'm a middle school student who spends most of his time at a ping pong table, behind a guitar, or arguing with a chatbot. This is my corner of the internet.",
+    "I'm a middle school student who spends most of his time at a ping pong table, staring at a stock chart, or arguing with a chatbot. This is my corner of the internet.",
 
   // ── About ─────────────────────────────────────────────────────────
   about: [
-    "Hey! I'm Lucas. I'm in middle school, and I like making things — songs, spin serves, and lately, stuff with AI.",
-    "I got into table tennis because it looked easy. It was not easy. I got into guitar because it looked hard. It was, in fact, hard. I'm still doing both.",
+    "Hey! I'm Lucas. I'm in middle school, and I like figuring things out — spin serves, why the market moved today, and lately, stuff with AI.",
+    "I got into table tennis because it looked easy. It was not easy. I got into the markets because it looked hard. It is, in fact, hard. I'm still doing both.",
     "Right now I'm really into how AI works and how businesses work, and I'm trying to find where those two overlap. If you're into any of this, I'd genuinely like to meet you.",
   ],
 
@@ -79,16 +79,15 @@ export const siteConfig = {
     ],
   },
 
-  // ── Guitar ────────────────────────────────────────────────────────
-  guitar: {
+  // ── Markets ───────────────────────────────────────────────────────
+  // The numbers are not in this file — they're scraped live from Yahoo
+  // Finance every time the page is built or refreshed. All you control
+  // here is what the section says about itself.
+  market: {
     blurb:
-      "Six strings, four chords, one very patient family. Hover the strings over there — they actually move. That took me a while.",
-    stats: [
-      { label: "Playing since", value: FILL_ME_IN, hint: "what year?" },
-      { label: "My guitar", value: FILL_ME_IN, hint: "brand / model, or just 'a beat up acoustic'" },
-      { label: "Learning now", value: FILL_ME_IN, hint: "what song are you working on?" },
-      { label: "Favorite riff", value: FILL_ME_IN, hint: "" },
-    ],
+      "I've started watching what the market does every day. These are real numbers, scraped live — hover an index over there to see how its day went.",
+    // How often the page asks for fresh numbers, in seconds. 0 turns it off.
+    refreshSeconds: 60,
   },
 
   // ── AI + business ─────────────────────────────────────────────────
@@ -131,7 +130,7 @@ export const siteConfig = {
   contact: {
     heading: "Let's be friends",
     blurb:
-      "Seriously. If you play table tennis, play guitar, are building something with AI, or just want to say hi — email me. I reply to everyone.",
+      "Seriously. If you play table tennis, follow the markets, are building something with AI, or just want to say hi — email me. I reply to everyone.",
     cta: "Say hi",
   },
 

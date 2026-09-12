@@ -20,6 +20,8 @@
   --color-court: var(--court);
   --color-cream: var(--cream);
   --color-line: var(--line);
+  --color-up: var(--up);
+  --color-down: var(--down);
 
   --font-display: var(--font-display);
   --font-body: var(--font-body);
@@ -87,6 +89,15 @@
   --cream: oklch(0.9475 0.0172 84.59);
   --line: oklch(0.3171 0.0054 91.55);
   --radius: 0.625rem;
+
+  /* Market up/down. --up is a lighter step of the court-green ramp (same hue,
+     161°). Measured on the card surface (#1a1a1a): contrast 9.3 and 5.1, and
+     the pair separates by ΔE 12.8 under deuteranopia — but red/green is never
+     the only cue, so every delta also carries a ▲/▼ glyph and a signed number.
+     Neither is used for a data mark next to --brand: orange and --down sit only
+     ΔE 7 apart, so brand orange stays on text and chrome in this section. */
+  --up: oklch(0.78 0.14 161);
+  --down: oklch(0.66 0.21 27);
 }
 
 :root {

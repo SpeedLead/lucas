@@ -1,8 +1,8 @@
 import { About } from "@/components/site/about";
 import { Contact } from "@/components/site/contact";
 import { SiteFooter } from "@/components/site/footer";
-import { Guitar } from "@/components/site/guitar";
 import { Hero } from "@/components/site/hero";
+import { Market } from "@/components/site/market";
 import { SiteNav } from "@/components/site/nav";
 import { Projects } from "@/components/site/projects";
 import { TableTennis } from "@/components/site/table-tennis";
@@ -23,7 +23,7 @@ export default function HomePage() {
         <Hero />
         <About />
         <TableTennis />
-        <Guitar />
+        <Market />
         <Projects />
         <Contact />
       </main>

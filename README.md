@@ -1,4 +1,4 @@
-# Lucas's website 🏓🎸🤖
+# Lucas's website 🏓📈🤖
 
 My personal site. Built with Next.js 16, TypeScript, Tailwind CSS v4 and shadcn/ui.
 There's a real ping pong game in the header — you can actually play it.
@@ -12,6 +12,9 @@ There's a real ping pong game in the header — you can actually play it.
 **Almost everything lives in one file: [`src/lib/site-config.ts`](src/lib/site-config.ts).**
 
 Open it, change the text, save. That's it — you never need to touch the components.
+
+The one exception is the **Markets** section: those numbers aren't yours to type.
+They're scraped live from Yahoo Finance every minute (see below).
 
 Anything that still says `[fill me in]` is waiting for you, and it shows up
 in italics on the page so it's easy to spot.
@@ -43,6 +46,29 @@ npx tsc --noEmit # check the TypeScript types
 
 ---
 
+## 📈 Where the market numbers come from
+
+The Markets section reads real prices off
+[finance.yahoo.com](https://finance.yahoo.com/) — the strip of indices Yahoo
+puts at the top of its own page. Nothing is typed in by hand and there's no API
+key to sign up for.
+
+- [`src/lib/market.ts`](src/lib/market.ts) pulls the numbers out of Yahoo's HTML.
+- [`src/lib/market-server.ts`](src/lib/market-server.ts) does the fetching, and
+  caches it so we ask Yahoo at most once a minute no matter how many people visit.
+- [`src/app/api/market/route.ts`](src/app/api/market/route.ts) is what the page
+  calls to refresh itself without a reload.
+
+Two things to know:
+
+1. **It can break.** We're reading Yahoo's web page, not an official feed, so if
+   they redesign it the section shows a "couldn't load" card instead of numbers.
+   The rest of the site is unaffected — and so is `npm run build`.
+2. **How often it refreshes** is `market.refreshSeconds` in `site-config.ts`.
+   Set it to `0` to stop the page refreshing itself.
+
+---
+
 ## 📁 Where things are
 
 ```
@@ -54,7 +80,8 @@ src/
 │   └── globals.css           colors and theme
 └── components/
     ├── site/                 one file per section of the page
-    │   └── pong-game.tsx     the ping pong game (canvas + physics)
+    │   ├── pong-game.tsx     the ping pong game (canvas + physics)
+    │   └── market-*.tsx      the live market board and its chart
     ├── motion/               reusable animations
     └── ui/                   shadcn/ui building blocks
 ```
